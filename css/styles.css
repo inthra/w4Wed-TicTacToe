@@ -1,0 +1,14 @@
+.jumbotron {
+  text-align: center;
+  background-color: #b4ff9c;
+  color: gray;
+  font-family: verdana;
+}
+
+div.col-sm-3 {
+  margin: 7px;
+  border-color: black;
+  border-width: 1px;
+  border-style: solid;
+  height: 100px;
+}
