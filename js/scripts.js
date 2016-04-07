@@ -12,15 +12,15 @@ var emptySpace = function(position) {
 }
 
   // function to check mark is X or O --------------
-var checkMark = function(player, mark) {
-  if (player === 1) {
-    mark = "X";
-  }
-  else {
-    player = 2;
-    mark = "O";
-  }
-}
+// var checkMark = function(player, mark) {
+//   if (player === 1) {
+//     mark = "X";
+//   }
+//   else {
+//     player = 2;
+//     mark = "O";
+//   }
+// }
 
 // var boardNotFull = function(allPosition) {
 //   allPosition.map(function(i) {
@@ -44,26 +44,120 @@ $(document).ready(function() {
   var mark = "X";
   var notWinner = true;
 
-  for (; notWinner;) {
-    $("#a1").click(function() {
-      if (emptySpace) {
-        $("#a1").text(mark);
+  // for (; notWinner;) {
+    $("#1").click(function() {
+      if (emptySpace($("#1").html())) {
+        $("#1").text(mark);
+        if (mark === "X") {
+          mark = "O";
+        }
+        else if (mark === "O") {
+          mark = "X";
+        }
       }
     });
 
-    notWinner = false;  // this line is for temporary stop the loop. it will be deleted soon.
+    $("#2").click(function() {
+      if (emptySpace($("#2").html())) {
+        $("#2").text(mark);
+        if (mark === "X") {
+          mark = "O";
+        }
+        else if (mark === "O") {
+          mark = "X";
+        }
+      }
+    });
+
+    $("#3").click(function() {
+      if (emptySpace($("#3").html())) {
+        $("#3").text(mark);
+        if (mark === "X") {
+          mark = "O";
+        }
+        else if (mark === "O") {
+          mark = "X";
+        }
+      }
+    });
+
+    $("#4").click(function() {
+      if (emptySpace($("#4").html())) {
+        $("#4").text(mark);
+        if (mark === "X") {
+          mark = "O";
+        }
+        else if (mark === "O") {
+          mark = "X";
+        }
+      }
+    });
+
+    $("#5").click(function() {
+      if (emptySpace($("#5").html())) {
+        $("#5").text(mark);
+        if (mark === "X") {
+          mark = "O";
+        }
+        else if (mark === "O") {
+          mark = "X";
+        }
+      }
+    });
+
+    $("#6").click(function() {
+      if (emptySpace($("#6").html())) {
+        $("#6").text(mark);
+        if (mark === "X") {
+          mark = "O";
+        }
+        else if (mark === "O") {
+          mark = "X";
+        }
+      }
+    });
+
+    $("#7").click(function() {
+      if (emptySpace($("#7").html())) {
+        $("#7").text(mark);
+        if (mark === "X") {
+          mark = "O";
+        }
+        else if (mark === "O") {
+          mark = "X";
+        }
+      }
+    });
+
+    $("#8").click(function() {
+      if (emptySpace($("#8").html())) {
+        $("#8").text(mark);
+        if (mark === "X") {
+          mark = "O";
+        }
+        else if (mark === "O") {
+          mark = "X";
+        }
+      }
+    });
+
+    $("#9").click(function() {
+      if (emptySpace($("#9").html())) {
+        $("#9").text(mark);
+        if (mark === "X") {
+          mark = "O";
+        }
+        else if (mark === "O") {
+          mark = "X";
+        }
+      }
+    });
+
+notWinner = false;
 
 // this step need to check the winner
 
-
-// this step is to check the mark character before go to the next loop
-    if (mark === "X") {
-      mark = "O";
-    }
-    else (mark === "O") {
-      mark = "X";
-    }
-  }  // end loop section
+  // }  // end For loop section
 
   $("#newGame").click(function(){
     resetBoard();
