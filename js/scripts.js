@@ -11,61 +11,88 @@ var emptySpace = function(position) {
   }
 }
 
-  // function to check mark is X or O --------------
-var checkMark = function(player, mark) {
-  if (player === 1) {
-    mark = "X";
+  // function to change player --------------
+var checkPlayer = function(mark){
+  if (mark === "X") {
+    return mark = "O";
   }
-  else {
-    player = 2;
-    mark = "O";
+  else if (mark === "O") {
+    return mark = "X";
   }
-}
-
-// var boardNotFull = function(allPosition) {
-//   allPosition.map(function(i) {
-//     if (i === "") {
-//       return true;
-//     }
-//     else {
-//       return false;
-//     }
-//   });
-// }
-
-  // function to clear board ---------------
-function resetBoard() {
-    $("td").empty("");
 }
 
 // user interface logic
 $(document).ready(function() {
-  var player = 1;
-  var mark = "X";
-  var notWinner = true;
+  var player = "X";
 
-  for (; notWinner;) {
-    $("#a1").click(function() {
-      if (emptySpace) {
-        $("#a1").text(mark);
-      }
-    });
+  $("#1").click(function() {
+        if (emptySpace($("#1").text())) {
+          $("#1").text(player);
 
-    notWinner = false;  // this line is for temporary stop the loop. it will be deleted soon.
+          player = checkPlayer(player);
 
-// this step need to check the winner
+        }
+      });
 
+      $("#2").click(function() {
+        if (emptySpace($("#2").text())) {
+          $("#2").text(player);
+          player = checkPlayer(player);
+        }
+      });
 
-// this step is to check the mark character before go to the next loop
-    if (mark === "X") {
-      mark = "O";
-    }
-    else (mark === "O") {
-      mark = "X";
-    }
-  }  // end loop section
+      $("#3").click(function() {
+        if (emptySpace($("#3").text())) {
+          $("#3").text(player);
+          player = checkPlayer(player);
+        }
+      });
+
+      $("#4").click(function() {
+        if (emptySpace($("#4").text())) {
+          $("#4").text(player);
+          player = checkPlayer(player);
+        }
+      });
+
+      $("#5").click(function() {
+        if (emptySpace($("#5").text())) {
+          $("#5").text(player);
+          player = checkPlayer(player);
+        }
+      });
+
+      $("#6").click(function() {
+        if (emptySpace($("#6").text())) {
+          $("#6").text(player);
+          player = checkPlayer(player);
+        }
+      });
+
+      $("#7").click(function() {
+        if (emptySpace($("#7").text())) {
+          $("#7").text(player);
+          player = checkPlayer(player);
+        }
+      });
+
+      $("#8").click(function() {
+        if (emptySpace($("#8").text())) {
+          $("#8").text(player);
+          player = checkPlayer(player);
+        }
+      });
+
+      $("#9").click(function() {
+        if (emptySpace($("#9").text())) {
+          $("#9").text(player);
+          player = checkPlayer(player);
+        }
+      });
+
 
   $("#newGame").click(function(){
-    resetBoard();
+    $("td").empty("");
   });
+
 });
